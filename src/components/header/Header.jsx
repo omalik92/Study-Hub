@@ -35,7 +35,6 @@ const Header = () => {
               </Link>
             </li>
 
-<<<<<<< HEAD
             <li className="nav_item">
               <a href="#profile" className="nav_link">
                 <i className="uil uil-user nav_icon"></i> Profile
@@ -47,19 +46,6 @@ const Header = () => {
                 <i className="uil uil-puzzle-piece nav_icon"></i> Resources
               </a>
             </li>
-=======
-                  <li className='nav_item'>
-                      <a href='#resources' className='nav_link'>
-                          <i className='uil uil-puzzle-piece nav_icon'></i> Resources
-                      </a>
-                  </li>
-
-                  <li className='nav_item'>
-                      <a href='#contact' className='nav_link'>
-                          <i className='uil uil-megaphone nav_icon'></i> Contact
-                      </a>
-                  </li>
->>>>>>> aa6ce458fbf10f15e187acc80bc880083811155e
 
             <li className="nav_item">
               <a href="#portfolio" className="nav_link">
