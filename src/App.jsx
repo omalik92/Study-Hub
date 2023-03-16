@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 import Header from "./components/header/Header";
-import MatHeader from "./components/header/MatHeader";
+import MatHeader from"./components/header/MatHeader"
 import Home from "./components/home/Home";
 import Courses from "./components/courses/Courses";
 import TimelineColor from "./components/timeline/Timeline";
@@ -16,7 +16,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <MatHeader />
         
         <Switch>
           <Route exact path="/">
