@@ -31,13 +31,13 @@ const Header = () => {
                   </li>
 
                   <li className='nav_item'>
-                      <a href='#skills' className='nav_link'>
+                      <a href='#resources' className='nav_link'>
                           <i className='uil uil-puzzle-piece nav_icon'></i> Resources
                       </a>
                   </li>
 
                   <li className='nav_item'>
-                      <a href='#portfolio' className='nav_link'>
+                      <a href='#contact' className='nav_link'>
                           <i className='uil uil-megaphone nav_icon'></i> Contact
                       </a>
                   </li>
