@@ -13,6 +13,7 @@ export default function TimelineColor() {
       <h2 className="section_title">Developer Road Map</h2>
       <span className="section_subtitle">Explore your learning journey</span>
     
+    <div className="timelines-container">
     <Timeline position="alternate">
       <TimelineItem>
         <TimelineSeparator>
@@ -97,11 +98,9 @@ export default function TimelineColor() {
 
         <TimelineContent>Success</TimelineContent>
       </TimelineItem>
-
-
-    
-    
+      
     </Timeline>
+    </div>
     
 
     </section>
