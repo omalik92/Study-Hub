@@ -9,8 +9,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/lab": "^5.0.0-alpha.123",
+    "@mui/material": "^5.11.13",
+    "@mui/styled-engine-sc": "^5.11.11",
+    "bootstrap": "^5.2.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-bootstrap": "^2.7.2",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.9",
+    "three": "^0.150.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
