@@ -18,7 +18,8 @@ function App() {
     <div className="App">
       {authIsReady && (
         <BrowserRouter>
-          <Header />
+          <MatHeader />
+
           <Switch>
             <Route exact path="/">
               {user && <Home />}
