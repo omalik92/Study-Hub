@@ -35,6 +35,7 @@
 .courses_button-icon {
     font-size: 1rem;
     transition: 0.3s;
+    color: #ffb6c1;
 }
 .courses_button:hover .courses_button-icon {
     transform: translateX(00.25rem);
@@ -143,5 +144,9 @@
     .courses_content {
         padding-right: 6rem;
     }
+  }
+  
+  .courses_modal-button {
+    background-color: #ffb6c1;
   }
   

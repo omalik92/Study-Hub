@@ -26,7 +26,15 @@
 }
 
 
-
+/* p,
+.description {
+  color: #6e735d;
+  text-decoration: none !important;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  max-height: 20px;
+} */
 
 
 .projectTitle {
