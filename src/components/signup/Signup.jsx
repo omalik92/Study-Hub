@@ -12,6 +12,8 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useSignup } from "../../hooks/useSignup";
+import { useState } from "react";
 
 function Copyright(props) {
   return (
@@ -34,13 +36,13 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Signup() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { error, signup } = useSignup();
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    signup(email, password);
   };
 
   return (
@@ -76,6 +78,9 @@ export default function Signup() {
               name="email"
               autoComplete="email"
               autoFocus
+              type="email"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
             />
             <TextField
               margin="normal"
@@ -86,6 +91,8 @@ export default function Signup() {
               type="password"
               id="password"
               autoComplete="current-password"
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -113,6 +120,7 @@ export default function Signup() {
             </Grid>
           </Box>
         </Box>
+        {error && <p>{error}</p>}
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>

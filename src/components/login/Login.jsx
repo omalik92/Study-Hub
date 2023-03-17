@@ -12,6 +12,9 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useState } from "react";
+//firebase imports
+import { useLogin } from "../../hooks/useLogin";
 
 function Copyright(props) {
   return (
@@ -34,13 +37,12 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { error, login } = useLogin();
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    login(email, password);
   };
 
   return (
@@ -76,6 +78,8 @@ export default function Login() {
               name="email"
               autoComplete="email"
               autoFocus
+              type="email"
+              onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
               margin="normal"
@@ -84,6 +88,7 @@ export default function Login() {
               name="password"
               label="Password"
               type="password"
+              onChange={(e) => setPassword(e.target.value)}
               id="password"
               autoComplete="current-password"
             />
@@ -113,6 +118,7 @@ export default function Login() {
             </Grid>
           </Box>
         </Box>
+        {error && <p>{error}</p>}
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>

@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import "../header/header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+//firebase imports
+import { useLogout } from "../../hooks/useLogout";
+
 const Header = () => {
+  const { logout } = useLogout();
   /* ==========Toggle Menu ============ */
   const [Toggle, showMenu] = useState(false);
 
@@ -27,6 +31,11 @@ const Header = () => {
             <li className="nav_item">
               <Link to="/signup" className="nav_link active-link">
                 <i className="uil uil-estate nav_icon"></i> Signup
+              </Link>
+            </li>
+            <li className="nav_item" onClick={logout}>
+              <Link to="/signup" className="nav_link active-link">
+                <i className="uil uil-estate nav_icon"></i> Logout
               </Link>
             </li>
             <li className="nav_item">
