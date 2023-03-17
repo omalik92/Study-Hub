@@ -10,7 +10,7 @@ const Courses = () => {
 
   return (
     <section className="courses section" id="courses">
-        <h2 style={{marginTop:50}} className="section_title courses" id='course-title'>Featured Courses</h2>
+        <h2 className="section_title courses" id='course-title'>Featured Courses</h2>
         <span className="section_subtitle" id='course-subtitle'>Explore popular courses</span>
 
         <div className="courses_container container grid">
