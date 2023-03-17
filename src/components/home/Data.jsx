@@ -22,19 +22,7 @@ const Data = () => {
 
       {/* Into ACTION button/text */}
 
-      <Form className="d-flex search-bar">
-        <Form.Control
-          type="search"
-          placeholder="Search"
-          className="me-2"
-          aria-label="Search"
-        />
-      </Form>
-      <a href="#contact" className="button button--flex">
-        {" "}
-        Explore Courses&nbsp;&nbsp;
-        <i className="uil uil-location-arrow"></i>
-      </a>
+     
     </div>
   );
 };

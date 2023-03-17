@@ -6,6 +6,7 @@
 .courses_content {
     position: relative;
     border: 1px solid rgba(0, 0,0 , 0.1);
+    border-radius: 20px;
     background-color: var(--container-color);
     padding: 6rem 0 2rem 2.5rem;
 }
@@ -20,6 +21,9 @@
     margin-bottom: var(--mb-1);
     font-weight: var(--font-medium);
 }
+#course-title, #course-subtitle {
+    color: #fff;
+} 
 .courses_button {
     color: var(--title-color);
     font-size: var(--small-font-size);

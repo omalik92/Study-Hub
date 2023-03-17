@@ -10,8 +10,8 @@ const Courses = () => {
 
   return (
     <section className="courses section" id="courses">
-        <h2 className="section_title">Featured Courses</h2>
-        <span className="section_subtitle">Explore popular courses</span>
+        <h2 className="section_title courses" id='course-title'>Featured Courses</h2>
+        <span className="section_subtitle" id='course-subtitle'>Explore popular courses</span>
 
         <div className="courses_container container grid">
             <div className="courses_content">

@@ -9,7 +9,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 export default function TimelineColor() {
   return (
 
-    <section className="roadMap section">
+    <section className="roadMap section" style={{marginTop:'100px'}}>
       <h2 className="section_title">Developer Road Map</h2>
       <span className="section_subtitle">Explore your learning journey</span>
     
