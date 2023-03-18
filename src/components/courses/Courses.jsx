@@ -67,7 +67,7 @@ const Courses = () => {
                             build their web applications.</p>
                         </li>
 
-                        <li className="courses_modal-service">
+                        {/* <li className="courses_modal-service">
                             <i className="uil uil-check-circle 
                             courses_modal-icon"></i>
                             <p className="courses_modal-info">
@@ -76,6 +76,15 @@ const Courses = () => {
                             virtual DOM, JSX syntax, and the ability to easily 
                             integrate with other libraries and frameworks. 
                             </p>
+                        </li> */}
+
+                    {/* Replace the list item with a button */}
+                    <li className="courses_modal-service">
+                            <a href="https://www.udemy.com/courses/search/?q=react+js&src=sac&kw=react" target="_blank">
+                                <button className="courses_modal-button">
+                                    Check out this Courses
+                                </button>
+                            </a>
                         </li>
 
                     </ul>
@@ -137,15 +146,13 @@ const Courses = () => {
                         </li>
 
                         <li className="courses_modal-service">
-                            <i className="uil uil-check-circle 
-                            courses_modal-icon"></i>
-                            <p className="courses_modal-info">
-                            Increase your employability, as JavaScript is one of 
-                            the most widely used programming languages, with 
-                            high demand for skilled JavaScript developers across 
-                            various industries. 
-                            </p>
+                            <a href="https://medium.com/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645" target="_blank">
+                                <button className="courses_modal-button">
+                                    Check out this Courses
+                                </button>
+                            </a>
                         </li>
+
 
                     </ul>
                     </div>
@@ -206,14 +213,11 @@ const Courses = () => {
                         </li>
 
                         <li className="courses_modal-service">
-                            <i className="uil uil-check-circle 
-                            courses_modal-icon"></i>
-                            <p className="courses_modal-info">
-                            Have greater control over your website design 
-                            and functionality, as knowledge of HTML/CSS 
-                            enables you to make customizations and troubleshoot 
-                            issues that may arise. 
-                            </p>
+                            <a href="https://www.coursera.org/courses?query=html%20css" target="_blank">
+                                <button className="courses_modal-button">
+                                    Check out this Courses
+                                </button>
+                            </a>
                         </li>
 
                     </ul>
