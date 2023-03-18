@@ -32,23 +32,23 @@ export default function Player() {
 
   return (
     
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin:3, }}>
-      <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', mb: 3 }}>
+    <Box sx={{ display: 'block', flexDirection: 'column', alignItems: 'center', margin:10, }}>
+      <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', mb: 3,  }}>
         <button className='button button--flex player'  onClick={() => setVideoUrl('https://youtu.be/dGcsHMXbSOA')}>
           React Course&nbsp;&nbsp;
           <i className="uil uil-location-arrow"></i>
         </button>
-        <button className='button button--flex player' onClick={() => setVideoUrl('https://youtu.be/b9eMGE7QtTk')}>
-        React Course&nbsp;&nbsp;
+        <button className='button button--flex player' onClick={() => setVideoUrl('https://youtu.be/jS4aFq5-91M')}>
+        JavaScript Course&nbsp;&nbsp;
         <i className="uil uil-location-arrow"></i>
         </button>
-        <button className='button button--flex player' onClick={() => setVideoUrl('https://youtu.be/j942wKiXFu8')}>
-        React Course&nbsp;&nbsp;
+        <button className='button button--flex player' onClick={() => setVideoUrl('https://youtu.be/mU6anWqZJcc')}>
+        HTML/CSS Course&nbsp;&nbsp;
         <i className="uil uil-location-arrow"></i>
         </button>
       </Box>
 
-      <Card component="li" sx={{ minWidth: '100%', minHeight:400, flexGrow: 1}}>
+      <Card component="li" sx={{ minWidth: '100%', minHeight:400, flexGrow: 1, border:'#000 0.5px solid', borderRadius:8}}>
         {videoUrl && (
           <ReactPlayer
             url={videoUrl}
@@ -57,7 +57,7 @@ export default function Player() {
             width="100%"
             height="100%"
             onClick={handlePlayerClick}
-            style={{ position: 'absolute', top: 0, left: 0, zIndex: 1, borderRadius: 8 }}
+            style={{ position: 'absolute', top: 0, left: 0, zIndex: 1, padding:7, borderRadius: 8 }}
           />
         )}
         <CardContent onClick={handlePlayerClick} style={{ position: 'relative', zIndex: 2, padding: 0, margin: 0, borderRadius: 8 }}>
