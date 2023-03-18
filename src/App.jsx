@@ -7,6 +7,7 @@ import Header from "./components/header/Header";
 import MatHeader from "./components/header/MatHeader";
 import Home from "./components/home/Home";
 import Courses from "./components/courses/Courses";
+import Player from './components/courses/Player';
 import TimelineColor from "./components/timeline/Timeline";
 import Login from "./components/login/Login";
 import Signup from "./components/signup/Signup";
@@ -26,6 +27,7 @@ function App() {
             <Route exact path="/">
               {user && <Home />}
               {user && <Courses />}
+              {user && <Player />}
               {user && <TimelineColor />}
               {user && <Skills />}
               {user && <ResourcesDisplay />}
