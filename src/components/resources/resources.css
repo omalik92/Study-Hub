@@ -4,15 +4,15 @@
 
   }
 
-  .my-card {
-    margin: 10px;
+  .card {
+    width: 350px; /* Adjust this to increase or decrease the size of the card */
+    margin: 10px; /* Adjust this to reduce the margin between the cards */
   }
+  
   
   .my-container {
     padding: 50px;
   }
-
-
 
 
 .projects {
@@ -55,4 +55,14 @@ a:hover {
 }
 a:active {
   text-decoration: none;
+}
+
+#header {
+  background: url(/images/courses.jpeg) center center / cover no-repeat ;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

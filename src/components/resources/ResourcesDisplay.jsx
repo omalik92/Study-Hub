@@ -3,6 +3,7 @@ import resources from "./resources.json";
 import ResourcesPage from "./ResourcesPage";
 
 
+
 function ResourcesDisplay() {
   // Creating an array with the projects.json file
       const resourcesArray = [];
@@ -18,9 +19,11 @@ function ResourcesDisplay() {
       
   return (
     <div>
-      <div className="row justify-content-center" id="rows">
-      <h2 style={{marginTop:20}} className="section_title">Course Dashboard</h2>
-        <span className="section_subtitle">Check out the latest learning resources</span>
+      <section id="header" className="jumbotron text-center">
+        <h1 className="display-3">Course Dashboard</h1>
+        <p className="lead">Check out the latest learning resources.</p>
+      </section>
+        <div className="row justify-content-center" id="rows">
         <div className="container-fluid my-container">
           <div className="row">
             <div className="col-4">{resourcesArray[0]}</div>

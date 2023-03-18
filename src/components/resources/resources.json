@@ -1,47 +1,47 @@
 [
     {
       "id": 1,
-      "title": "udemy",
-      "image": "images/udemy.jpeg",
-      "description" : "about course ",
+      "title": "Udemy",
+      "image": "images/udemyimage.jpeg",
+      "description" : "Udemy is a popular online learning platform that offers a wide variety of courses on IT and software, among other topics. It does offer some free courses, the majority of its courses are paid.",
       "projectUrl": "https://www.udemy.com/courses/it-and-software/"
     },
     {
         "id": 2,
-        "title": "udemy",
-        "image": "images/udemy.jpeg",
-          "description" : "about course.",
-         "projectUrl": "https://www.udemy.com/courses/it-and-software/"
+        "title": "FreeCodeCamp",
+        "image": "images/FreeCodeCamp.png",
+          "description" : "FreeCodeCamp is a non-profit organization that provides free online courses in web development and other programming-related topics. The courses are project-based, meaning you'll work on real-world projects, which helps to build practical skills.",
+         "projectUrl": "https://www.freecodecamp.org/"
       },
       {
         "id": 3,
-        "title": "udacity",
-        "image": "images/udemy.jpeg",
+        "title": "Udacity",
+        "image": "images/Udacity.png",
 
-          "description" : "about course.",
-         "projectUrl": "https://www.udemy.com/courses/it-and-software/"
+          "description" : "Udacity is an online learning platform that offers courses, nanodegrees, and other educational programs It offers both free and paid courses.",
+         "projectUrl": "https://www.udacity.com/"
       },
     
       {
         "id": 4,
-        "title": "udemy",
-        "image": "images/udemy.jpeg",
-        "description" : "about course ",
-        "projectUrl": "https://www.udemy.com/courses/it-and-software/"  
+        "title": "KhanAcademy",
+        "image": "images/khan.png",
+        "description" : "Khan Academy is a non-profit educational organization that provides free online courses in a wide range of subjects, including computer science and programming. Khan Academy is a free online learning platform. ",
+        "projectUrl": "https://www.khanacademy.org/computing"  
       },
       {
           "id": 5,
-          "title": "udemy",
-          "image": "images/udemy.jpeg",
+          "title": "The Odin Project",
+          "image": "images/odin.png",
         
-            "description" : "about course.",
-           "projectUrl": "https://www.udemy.com/courses/it-and-software/"  
+            "description" : "The Odin Project is a free, open-source curriculum for learning web development. It is designed to be a comprehensive and hands-on guide for anyone who wants to learn how to build websites and web applications.",
+           "projectUrl": "https://www.theodinproject.com/"  
         },
         {
           "id": 6,
-          "title": "udacity",
-          "image": "images/udemy.jpeg",
-            "description" : "about course.",
-           "projectUrl": "https://www.udemy.com/courses/it-and-software/"  
+          "title": "Coursera",
+          "image": "images/coursera.jpeg",
+            "description" : "Coursera is an online learning platform that offers  a variety of web development courses, ranging from beginner to advanced levels. Coursera also offers certificate programs and degree programs.",
+           "projectUrl": "https://www.coursera.org/certificates/computer-science-it/"  
         }
       ]
