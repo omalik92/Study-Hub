@@ -1,0 +1,14 @@
+.timelines-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timeline-left {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.timeline-right {
+  flex: 1;
+  margin-left: 30px;
+}

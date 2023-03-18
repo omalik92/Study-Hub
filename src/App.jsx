@@ -11,6 +11,7 @@ import TimelineColor from "./components/timeline/Timeline";
 import Login from "./components/login/Login";
 import Signup from "./components/signup/Signup";
 import Skills from "./components/skills/Skills";
+import ResourcesDisplay from "./components/resources/ResourcesDisplay";
 
 function App() {
   const { user, authIsReady } = useAuthContext();
@@ -26,6 +27,8 @@ function App() {
               {user && <Courses />}
               {user && <TimelineColor />}
               {user && <Skills />}
+              {user && <ResourcesDisplay />}
+
               {!user && <Redirect to="/login" />}
             </Route>
             <Route path="/courses"></Route>
