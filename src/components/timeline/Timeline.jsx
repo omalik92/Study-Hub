@@ -25,7 +25,7 @@ export default function TimelineColor() {
     <Timeline position="alternate">
     
     <h3 style={{textAlign:'center', marginBottom:30}}>Frontend Developer</h3>
-    <p style={{textAlign:'center', marginBottom:30}}>Path</p>
+    <p style={{textAlign:'center', marginBottom:30}}>|---------------------------|</p>
 
       <TimelineItem>
         <TimelineSeparator>
@@ -84,7 +84,7 @@ export default function TimelineColor() {
     <div className="timeline-right">
     <Timeline position="alternate">
     <h3 style={{textAlign:'center', marginBottom:30}}>Backend Developer</h3>
-    <p style={{textAlign:'center', marginBottom:30}}>Path</p>
+    <p style={{textAlign:'center', marginBottom:30}}>|---------------------------|</p>
       
     <TimelineItem>
         <TimelineSeparator>

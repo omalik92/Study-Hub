@@ -80,9 +80,9 @@ const Courses = () => {
 
                     {/* Replace the list item with a button */}
                     <li className="courses_modal-service">
-                            <a href="https://www.udemy.com/courses/search/?q=react+js&src=sac&kw=react" target="_blank">
-                                <button className="courses_modal-button">
-                                    Check out this Courses
+                                <a href="https://www.udemy.com/courses/search/?q=react+js&src=sac&kw=react" target="_blank">
+                                <button className='button button--flex'> Check out this course&nbsp;&nbsp; 
+                                    <i className="uil uil-location-arrow"></i>
                                 </button>
                             </a>
                         </li>
@@ -147,8 +147,8 @@ const Courses = () => {
 
                         <li className="courses_modal-service">
                             <a href="https://medium.com/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645" target="_blank">
-                                <button className="courses_modal-button">
-                                    Check out this Courses
+                                <button className='button button--flex'> Check out this course&nbsp;&nbsp; 
+                                    <i className="uil uil-location-arrow"></i>
                                 </button>
                             </a>
                         </li>
@@ -214,8 +214,8 @@ const Courses = () => {
 
                         <li className="courses_modal-service">
                             <a href="https://www.coursera.org/courses?query=html%20css" target="_blank">
-                                <button className="courses_modal-button">
-                                    Check out this Courses
+                                <button className='button button--flex'> Check out this course&nbsp;&nbsp; 
+                                    <i className="uil uil-location-arrow"></i>
                                 </button>
                             </a>
                         </li>

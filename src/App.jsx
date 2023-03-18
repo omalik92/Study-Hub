@@ -12,6 +12,7 @@ import Login from "./components/login/Login";
 import Signup from "./components/signup/Signup";
 import Skills from "./components/skills/Skills";
 import ResourcesDisplay from "./components/resources/ResourcesDisplay";
+import Contact from './components/contact/Contact'
 
 function App() {
   const { user, authIsReady } = useAuthContext();
@@ -28,6 +29,7 @@ function App() {
               {user && <TimelineColor />}
               {user && <Skills />}
               {user && <ResourcesDisplay />}
+              {user && <Contact />}
 
               {!user && <Redirect to="/login" />}
             </Route>
