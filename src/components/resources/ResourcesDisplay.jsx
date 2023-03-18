@@ -19,7 +19,8 @@ function ResourcesDisplay() {
   return (
     <div>
       <div className="row justify-content-center" id="rows">
-        <p className="projects">Courses Dashboard</p>
+      <h2 style={{marginTop:20}} className="section_title">Course Dashboard</h2>
+        <span className="section_subtitle">Check out the latest learning resources</span>
         <div className="container-fluid my-container">
           <div className="row">
             <div className="col-4">{resourcesArray[0]}</div>

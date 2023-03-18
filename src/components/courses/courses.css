@@ -5,10 +5,12 @@
 }
 .courses_content {
     position: relative;
-    border: 1px solid rgba(0, 0,0 , 0.1);
+    /* border: 1px solid rgba(0, 0,0 , 0.1); */
     border-radius: 20px;
     background-color: var(--container-color);
     padding: 6rem 0 2rem 2.5rem;
+    box-shadow: 0 0 3px  rgba(0, 0, 0, 0.6) inset;
+
 }
 .courses_icon {
     display: block;
