@@ -49,6 +49,7 @@ export default function TimelineColor() {
           <TimelineDot color="secondary" />
           <TimelineConnector />
         </TimelineSeparator>
+        
 
         <TimelineContent>JavaScript</TimelineContent>
         </TimelineItem>

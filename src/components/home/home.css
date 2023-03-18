@@ -25,6 +25,9 @@
     margin-left: 20px;
     color: #fff
 }
+.home_social-icon:hover {
+    color: red;
+}
 .home_title {
     font-size: var(--big-font-size);
     margin-bottom: var(--mb-0-25);
