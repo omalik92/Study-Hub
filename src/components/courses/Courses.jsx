@@ -88,16 +88,6 @@ const Courses = () => {
                   </p>
                 </li>
 
-                {/* <li className="courses_modal-service">
-                            <i className="uil uil-check-circle 
-                            courses_modal-icon"></i>
-                            <p className="courses_modal-info">
-                            Increase your productivity by using a library that 
-                            provides a wide range of tools and features, such as 
-                            virtual DOM, JSX syntax, and the ability to easily 
-                            integrate with other libraries and frameworks. 
-                            </p>
-                        </li> */}
 
                 {/* Replace the list item with a button */}
                 <li className="courses_modal-service">

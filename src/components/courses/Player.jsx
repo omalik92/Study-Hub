@@ -40,6 +40,10 @@ export default function Player() {
         margin: 10,
       }}
     >
+     <h2 className="section_title">Featured Tutorials</h2>
+    
+    <span className="section_subtitle">Click below to get started</span>
+
       <Box
         sx={{
           display: "flex",
@@ -49,25 +53,26 @@ export default function Player() {
           mb: 3,
         }}
       >
+      
         <button
           className="button button--flex player"
           onClick={() => setVideoUrl("https://youtu.be/dGcsHMXbSOA")}
         >
-          React Course&nbsp;&nbsp;
+          React Tutorial&nbsp;&nbsp;
           <i className="uil uil-location-arrow"></i>
         </button>
         <button
           className="button button--flex player"
           onClick={() => setVideoUrl("https://youtu.be/jS4aFq5-91M")}
         >
-          JavaScript Course&nbsp;&nbsp;
+          JavaScript Tutorial&nbsp;&nbsp;
           <i className="uil uil-location-arrow"></i>
         </button>
         <button
           className="button button--flex player"
           onClick={() => setVideoUrl("https://youtu.be/mU6anWqZJcc")}
         >
-          HTML/CSS Course&nbsp;&nbsp;
+          HTML/CSS Tutorial&nbsp;&nbsp;
           <i className="uil uil-location-arrow"></i>
         </button>
       </Box>
@@ -76,10 +81,10 @@ export default function Player() {
         component="li"
         sx={{
           minWidth: "100%",
-          minHeight: 400,
+          minHeight: 515,
           flexGrow: 1,
-       
           borderRadius: 8,
+          border:'var(--title-color-dark) 0.2px dashed'
         }}
       >
         {videoUrl && (
@@ -95,8 +100,7 @@ export default function Player() {
               top: 0,
               left: 0,
               zIndex: 1,
-              padding: 7,
-              borderRadius: 8,
+              padding: 12,
             }}
           />
         )}
