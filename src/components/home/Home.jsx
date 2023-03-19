@@ -3,7 +3,7 @@ import './home.css';
 import Social from './Social';
 import Data from './Data';
 import mp4 from '../../assets/constalation.mp4';
-import { Search } from './Search';
+
 
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
         <div className='home_container container grid' >
             <div className='home_content grid'>
                 <Social />
-                {/* <Search /> */}
+                
 
 {/* PROFILE pic / url added to CSS */}
                 <div className='home_bg'>
