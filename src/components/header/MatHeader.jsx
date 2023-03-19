@@ -191,6 +191,9 @@ export default function PrimarySearchAppBar() {
       <MenuItem onClick={handleBurgerMenuClose} component={Link} to="/">
         Contact
       </MenuItem>
+      <MenuItem onClick={handleBurgerMenuClose} component={Link} to="/">
+        MainPage
+      </MenuItem>
     </Menu>
   );
 

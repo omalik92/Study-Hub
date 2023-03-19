@@ -16,12 +16,11 @@ function ResourcesDisplay() {
     />)
   }
       
-      
   return (
     <div>
       <section id="header" className="jumbotron text-center">
         <h1 className="display-3">Course Dashboard</h1>
-        <p className="lead">Check out the latest learning resources.</p>
+        <p className="lead">Take Control of Your Learning: Access All Your Web Development Courses in One Dashboard.</p>
       </section>
         <div className="row justify-content-center" id="rows">
         <div className="container-fluid my-container">

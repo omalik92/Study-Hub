@@ -61,6 +61,13 @@ const Header = () => {
                 <i className="uil uil-megaphone nav_icon"></i> Contact
               </a>
             </li>
+
+            <li className="nav_item">
+              <a href="#skills" className="nav_link">
+                <i className="uil uil-puzzle-piece nav_icon"></i> CourseSearch
+              </a>
+            </li>
+
           </ul>
 
           {/* navigation links END */}
