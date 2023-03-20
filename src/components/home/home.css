@@ -1,6 +1,10 @@
 .home_container {
     row-gap: 7rem;
 }
+.home_bg-video {
+    width: 100%;
+    height: 100vh;
+}
 .home_content {
     grid-template-columns: repeat(2, 2fr);
     padding-top: 5.5rem;

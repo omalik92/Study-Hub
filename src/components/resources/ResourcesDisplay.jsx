@@ -18,7 +18,7 @@ function ResourcesDisplay() {
       
   return (
     <div>
-      <section id="header" className="jumbotron text-center">
+      <section id="resources" className="jumbotron text-center">
         <h1 className="display-3">Course Dashboard</h1>
         <p className="lead">Take Control of Your Learning: Access All Your Web Development Courses in One Dashboard.</p>
       </section>

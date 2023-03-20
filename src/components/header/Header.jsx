@@ -15,7 +15,7 @@ const Header = () => {
     <header className="header">
       <nav className="nav container">
         {/* Header LOGO */}
-        <a href="index.html" className="nav_logo">
+        <a href="/" className="nav_logo">
           StudyHUB
         </a>
 
@@ -23,25 +23,29 @@ const Header = () => {
           {/* navigation links START */}
 
           <ul className="nav_list grid">
+            
             <li className="nav_item">
-              <Link to="/login" className="nav_link active-link">
+            <a href="#login" className="nav_link">
                 <i className="uil uil-estate nav_icon"></i> Login
-              </Link>
+              </a>
             </li>
+            
             <li className="nav_item">
-              <Link to="/signup" className="nav_link active-link">
+            <a href="#signup" className="nav_link">
                 <i className="uil uil-estate nav_icon"></i> Signup
-              </Link>
+              </a>
             </li>
+            
             <li className="nav_item" onClick={logout}>
-              <Link to="/signup" className="nav_link active-link">
+            <a href="#logout" className="nav_link">
                 <i className="uil uil-estate nav_icon"></i> Logout
-              </Link>
+              </a>
             </li>
+
             <li className="nav_item">
-              <Link to="/" className="nav_link active-link">
+              <a href="#home" className="nav_link">
                 <i className="uil uil-estate nav_icon"></i> Home
-              </Link>
+              </a>
             </li>
 
             <li className="nav_item">
@@ -51,20 +55,14 @@ const Header = () => {
             </li>
 
             <li className="nav_item">
-              <a href="#skills" className="nav_link">
+              <a href="#resources" className="nav_link">
                 <i className="uil uil-puzzle-piece nav_icon"></i> Resources
               </a>
             </li>
 
             <li className="nav_item">
-              <a href="#portfolio" className="nav_link">
+              <a href="#contact" className="nav_link">
                 <i className="uil uil-megaphone nav_icon"></i> Contact
-              </a>
-            </li>
-
-            <li className="nav_item">
-              <a href="#skills" className="nav_link">
-                <i className="uil uil-puzzle-piece nav_icon"></i> CourseSearch
               </a>
             </li>
 
