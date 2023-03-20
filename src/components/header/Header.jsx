@@ -25,11 +25,12 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
+
   return (
     <header className="header">
       <nav className="nav container">
         {/* Header LOGO */}
-        <a href="/" className="nav_logo">
+        <a href="#home" className="nav_logo">
           StudyHUB
         </a>
 
