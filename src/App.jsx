@@ -32,9 +32,9 @@ function App() {
               {user && <Player />}
               {user && <TimelineColor />}
               {user && <Skills />}
-              {user && <ResourcesDisplay />}
+              {/* {user && <ResourcesDisplay />} */}
               {user && <Contact />}
-              {user && <MainPage />}
+              {/* {user && <MainPage />} */}
 
               {!user && <Redirect to="/login" />}
             </Route>

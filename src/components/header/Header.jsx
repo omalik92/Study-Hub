@@ -11,6 +11,20 @@ const Header = () => {
   /* ==========Toggle Menu ============ */
   const [Toggle, showMenu] = useState(false);
 
+  // Select the header element
+const header = document.querySelector('.header');
+
+// Listen for the scroll event
+window.addEventListener('scroll', () => {
+  // If the user has scrolled down at least 50 pixels
+  if (window.scrollY >= 50) {
+    // Add the 'scrolled' class to the header element
+    header.classList.add('scrolled');
+  } else {
+    // Otherwise, remove the 'scrolled' class
+    header.classList.remove('scrolled');
+  }
+});
   return (
     <header className="header">
       <nav className="nav container">
