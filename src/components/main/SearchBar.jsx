@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Modal from 'react-modal';
+import './searchbar.css';
+
 
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
