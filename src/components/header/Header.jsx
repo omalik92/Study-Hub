@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import "../header/header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -9,32 +8,39 @@ import { useLogout } from "../../hooks/useLogout";
 const Header = () => {
   const { logout } = useLogout();
   /* ==========Toggle Menu ============ */
-  const [Toggle, showMenu] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Select the header element
-const header = document.querySelector('.header');
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY >= 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+//   // Select the header element
+// const header = document.querySelector('.header');
 
-// Listen for the scroll event
-window.addEventListener('scroll', () => {
-  // If the user has scrolled down at least 50 pixels
-  if (window.scrollY >= 50) {
-    // Add the 'scrolled' class to the header element
-    header.classList.add('scrolled');
-  } else {
-    // Otherwise, remove the 'scrolled' class
-    header.classList.remove('scrolled');
-  }
-});
+// // Listen for the scroll event
+// window.addEventListener('scroll', () => {
+//   // If the user has scrolled down at least 50 pixels
+//   if (window.scrollY >= 50) {
+//     // Add the 'scrolled' class to the header element
+//     header.classList.add('scrolled');
+//   } else {
+//     // Otherwise, remove the 'scrolled' class
+//     header.classList.remove('scrolled');
+//   }
+// });
 
   return (
-    <header className="header">
+    <header className={`header ${scrolled ? 'scrolled' : ""}`}>
       <nav className="nav container">
         {/* Header LOGO */}
         <a href="#home" className="nav_logo">
           StudyHUB
         </a>
 
-        <div className={Toggle ? "nav_menu show-menu" : "nav_menu"}>
+        <div className="nav_menu">
           {/* navigation links START */}
 
           <ul className="nav_list grid">
