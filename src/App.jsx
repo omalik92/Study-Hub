@@ -12,6 +12,7 @@ import Signup from "./components/signup/Signup";
 import Skills from "./components/skills/Skills";
 import ResourcesDisplay from "./components/resources/ResourcesDisplay";
 import Contact from './components/contact/Contact';
+import Footer from "./components/footer/Footer";
 
 function App() {
   const { user, authIsReady } = useAuthContext();
@@ -32,6 +33,8 @@ function App() {
               {user && <Skills />}
               {user && <ResourcesDisplay />}
               {user && <Contact />}
+              {user && <Footer />}
+
 
               {!user && <Redirect to="/login" />}
             </Route>
