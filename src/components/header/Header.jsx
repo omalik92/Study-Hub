@@ -2,6 +2,17 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../header/header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+//required for app drawer
+import { styled, alpha } from "@mui/system";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import MenuItem from "@mui/material/MenuItem";
+import Menu from "@mui/material/Menu";
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
 
 //firebase imports
 import { useLogout } from "../../hooks/useLogout";
@@ -11,20 +22,30 @@ const Header = () => {
   /* ==========Toggle Menu ============ */
   const [Toggle, showMenu] = useState(false);
 
-  // Select the header element
-const header = document.querySelector('.header');
+  const [drawer, setDrawer] = useState(false);
 
-// Listen for the scroll event
-window.addEventListener('scroll', () => {
-  // If the user has scrolled down at least 50 pixels
-  if (window.scrollY >= 50) {
-    // Add the 'scrolled' class to the header element
-    header.classList.add('scrolled');
-  } else {
-    // Otherwise, remove the 'scrolled' class
-    header.classList.remove('scrolled');
-  }
-});
+  const handleDrawerOpen = () => {
+    setDrawer(true);
+  };
+
+  const handleDrawerClose = () => {
+    setDrawer(false);
+  };
+
+  // Select the header element
+  const header = document.querySelector(".header");
+
+  // Listen for the scroll event
+  window.addEventListener("scroll", () => {
+    // If the user has scrolled down at least 50 pixels
+    if (window.scrollY >= 50) {
+      // Add the 'scrolled' class to the header element
+      header.classList.add("scrolled");
+    } else {
+      // Otherwise, remove the 'scrolled' class
+      header.classList.remove("scrolled");
+    }
+  });
   return (
     <header className="header">
       <nav className="nav container">
@@ -37,34 +58,9 @@ window.addEventListener('scroll', () => {
           {/* navigation links START */}
 
           <ul className="nav_list grid">
-            
-            <li className="nav_item">
-            <a href="#login" className="nav_link">
-                <i className="uil uil-estate nav_icon"></i> Login
-              </a>
-            </li>
-            
-            <li className="nav_item">
-            <a href="#signup" className="nav_link">
-                <i className="uil uil-estate nav_icon"></i> Signup
-              </a>
-            </li>
-            
-            <li className="nav_item" onClick={logout}>
-            <a href="#logout" className="nav_link">
-                <i className="uil uil-estate nav_icon"></i> Logout
-              </a>
-            </li>
-
             <li className="nav_item">
               <a href="#home" className="nav_link">
                 <i className="uil uil-estate nav_icon"></i> Home
-              </a>
-            </li>
-
-            <li className="nav_item">
-              <a href="#profile" className="nav_link">
-                <i className="uil uil-user nav_icon"></i> Profile
               </a>
             </li>
 
@@ -79,7 +75,24 @@ window.addEventListener('scroll', () => {
                 <i className="uil uil-megaphone nav_icon"></i> Contact
               </a>
             </li>
+            {/* Profile link and drawer */}
+            <li className="nav_item">
+              <a href="#" className="nav_link" onClick={handleDrawerOpen}>
+                <i className="uil uil-user nav_icon"></i> Profile
+              </a>
+            </li>
 
+            {/* Drawer */}
+            <Drawer anchor="right" open={drawer} onClose={handleDrawerClose}>
+              <div
+                className="drawer-content"
+                style={{ width: "300px", padding: "16px" }}
+              >
+                <a onClick={logout} href="#" className="nav_link_logout">
+                  Logout
+                </a>
+              </div>
+            </Drawer>
           </ul>
 
           {/* navigation links END */}
