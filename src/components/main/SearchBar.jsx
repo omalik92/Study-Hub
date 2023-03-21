@@ -5,7 +5,7 @@ function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
   const [top, setTop] = useState(7); // Default value of 7 days
   const [articles, setArticles] = useState([]);
-  const [modalIsOpen,setModalIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleSearch = async (event) => {
     event.preventDefault();
@@ -15,7 +15,7 @@ function SearchBar() {
     );
     const data = await response.json();
 
-    setArticles(data.slice(0, 9)); 
+    setArticles(data.slice(0, 9));
     setModalIsOpen(true);
   };
 

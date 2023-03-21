@@ -1,77 +1,79 @@
 .center {
   display: flex;
-  flex-direction: row; /* change from column to row */
+  flex-direction: row;
+  /* change from column to row */
   align-items: center;
-  justify-content: flex-start; /* change from center to flex-start */
+  justify-content: flex-start;
+  /* change from center to flex-start */
   height: 100vh;
 }
 
-  .search-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .search-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 200px;
-    margin-right: 10px;
-  }
-  
-  .search-days {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-  }
-  
-  .search-days-label {
-    font-size: 16px;
-    margin-right: 5px;
-  }
-  
-  .search-days-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 60px;
-    text-align: center;
-  }
-  
-  .search-days-span {
-    font-size: 16px;
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-    margin-left: 5px;
-  }
-  
-  .search-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .search-button:hover {
-    background-color: #3e8e41;
-  }
-  
-  .search-days-select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 120px;
-    text-align: center;
-  }
-  
-  .search-days-select option {
-    font-size: 16px;
-  }
+.search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.search-days {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.search-days-label {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.search-days-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 60px;
+  text-align: center;
+}
+
+.search-days-span {
+  font-size: 16px;
+
+  margin-left: 5px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #3e8e41;
+}
+
+.search-days-select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 120px;
+  text-align: center;
+}
+
+.search-days-select option {
+  font-size: 16px;
+}
