@@ -55,7 +55,7 @@
   align-items: center;
   font-size: var(--font-medium);
   transition: 0.3s;
-  color: #fff;
+  color: #000;
 }
 
 .nav_link_logout {

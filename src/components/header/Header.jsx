@@ -2,16 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../header/header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 //required for app drawer
-import { styled, alpha } from "@mui/system";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
 
 //firebase imports
 import { useLogout } from "../../hooks/useLogout";
@@ -42,20 +33,20 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  //   // Select the header element
-  // const header = document.querySelector('.header');
+  // //   // Select the header element
+  // // const header = document.querySelector('.header');
 
-  // Listen for the scroll event
-  window.addEventListener("scroll", () => {
-    // If the user has scrolled down at least 50 pixels
-    if (window.scrollY >= 50) {
-      // Add the 'scrolled' class to the header element
-      header.classList.add("scrolled");
-    } else {
-      // Otherwise, remove the 'scrolled' class
-      header.classList.remove("scrolled");
-    }
-  });
+  // // Listen for the scroll event
+  // window.addEventListener("scroll", () => {
+  //   // If the user has scrolled down at least 50 pixels
+  //   if (window.scrollY >= 50) {
+  //     // Add the 'scrolled' class to the header element
+  //     header.classList.add("scrolled");
+  //   } else {
+  //     // Otherwise, remove the 'scrolled' class
+  //     header.classList.remove("scrolled");
+  //   }
+  // });
 
   return (
     <header className={`header ${scrolled ? "scrolled" : ""}`}>
@@ -65,7 +56,7 @@ const Header = () => {
           StudyHUB
         </a>
 
-        <div className="nav_menu">
+        <div className={Toggle ? "nav_menu show-menu" : "nav_menu"}>
           {/* navigation links START */}
 
           <ul className="nav_list grid">
