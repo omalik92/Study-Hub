@@ -6,7 +6,7 @@ import { Box, Grid }  from '@mui/material';
 import Paper from '@mui/material/Paper';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
-import "./gpt.css";
+import "./assistant.css";
 import "../home/home.css"
 import cardInfo from './cardInfo.json';
 
@@ -32,7 +32,7 @@ MyComponent.propTypes = {
 const ModalContent = ({ selectedCard, handleClose, handleOpen }) => {
   const { title } = cardInfo[selectedCard] || { title: 'AI Assistant', content: 'Please select a valid card.' };
   const urlMap = {
-    'GPT': 'https://chat.openai.com/chat',
+    'Assistant': 'https://chat.openai.com/chat',
   };
   const url = urlMap[selectedCard];
  
