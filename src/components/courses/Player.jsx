@@ -84,7 +84,7 @@ export default function Player() {
           minHeight: 515,
           flexGrow: 1,
           borderRadius: 8,
-          border:'var(--title-color-dark) 0.2px dashed'
+          
         }}
       >
         {videoUrl && (

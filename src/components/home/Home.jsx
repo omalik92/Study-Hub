@@ -2,6 +2,7 @@ import React from 'react'
 import './home.css';
 import Social from './Social';
 import Data from './Data';
+import GPT from '../Assistant/GPT'
 import mp4 from '../../assets/constalation.mp4';
 
 
@@ -17,6 +18,7 @@ const Home = () => {
         <div className='home_container container grid'  id='home'>
             <div className='home_content grid'>
                 <Social />
+                
             
                 <Data />
             </div>

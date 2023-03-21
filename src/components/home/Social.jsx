@@ -1,4 +1,5 @@
 import React from "react";
+import GPT from '../Assistant/GPT'
 
 const Social = () => {
   return (
@@ -8,13 +9,15 @@ const Social = () => {
         <i className="uil uil-github"></i>
       </a>
 
-      <a href="/" className="home_social-icon" target="_blank" rel="noreferrer">
+      {/* <a href="/" className="home_social-icon" target="_blank" rel="noreferrer">
         <i className="uil uil-robot"></i>
-      </a>
+      </a> */}
+      <GPT />
 
       <a href="/" className="home_social-icon" target="_blank" rel="noreferrer">
         <i className="uil uil-fire"></i>
       </a>
+      
     </div>
   );
 };
