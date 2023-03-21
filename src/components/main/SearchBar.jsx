@@ -1,111 +1,96 @@
-// import React, { useState } from "react";
-// import axios from "axios";
-
-// const SearchBar = () => {
-//   const [query, setQuery] = useState("");
-//   const [results, setResults] = useState([]);
-
-//   const handleSubmit = async (event) => {
-//     event.preventDefault();
-//     const clientId = '0u2qvOtSvRvKQES7weiV4krq83Xoq965X46C4XCA';
-//     const clientSecret = 'vpJCMGoXxo4KmwUklq0okPDvo5P1ote7IQB7BFpkX6ExRGfa4x7FyzrYkUJg1yP3eyaaqKeZbgdPJ2CJOdJML2gCKrwaIgG1LpxEeIhHLffThNGufSExzmucBZGm8clC';
-//     const authString = `${clientId}:${clientSecret}`;
-//     const base64AuthString = btoa(authString);
-//     const accessTokenUrl =
-//       "https://www.udemy.com/api-2.0/oauth/token/?grant_type=client_credentials";
-//     try {
-//       const accessTokenResponse = await axios.post(accessTokenUrl, {}, {
-//         auth: {
-//           username: clientId,
-//           password: clientSecret
-//         }
-//       });
-//       const accessToken = accessTokenResponse.data.access_token;
-//       const searchUrl = `https://www.udemy.com/api-2.0/courses/?search=${query}`;
-//       const searchResponse = await axios.get(searchUrl, {
-//         headers: {
-//           Authorization: "Basic MHUycXZPdFN2UnZLUUVTN3dlaVY0a3JxODNYb3E5NjVYNDZDNFhDQTp2cEpDTUdvWHhvNEttd1VrbHEwb2tQRHZvNVAxb3RlN0lRQjdCRnBrWDZFeFJHZmE0eDdGeXpyWWtVSmcxeVAzZXlhYXFLZVpiZ2RQSjJDSk9kSk1MMmdDS3J3YUlnRzFMcHhFZUloSExmZlRoTkd1ZlNFeHptdWNCWkdtOGNsQw==",
-//         },
-//       });
-//       setResults(searchResponse.data.results);
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
-  
-
-//   return (
-//     <div className="search-bar">
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           type="text"
-//           placeholder="Search courses"
-//           value={query}
-//           onChange={(event) => setQuery(event.target.value)}
-//         />
-//         <button type="submit">Search</button>
-//       </form>
-//       {results.length > 0 && (
-//         <div className="search-results">
-//           <h2>Search Results</h2>
-//           <ul>
-//             {results.map((result) => (
-//               <li key={result.id}>
-//                 <a href={result.url}>{result.title}</a>
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default SearchBar;
-
-
-import React, { useState, useEffect } from 'react';
+import React, { useState } from "react";
+import Modal from 'react-modal';
 
 function SearchBar() {
-  const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
-  const [page, setPage] = useState(1);
-  const clientId = "0u2qvOtSvRvKQES7weiV4krq83Xoq965X46C4XCA";
-const clientSecret = "vpJCMGoXxo4KmwUklq0okPDvo5P1ote7IQB7BFpkX6ExRGfa4x7FyzrYkUJg1yP3eyaaqKeZbgdPJ2CJOdJML2gCKrwaIgG1LpxEeIhHLffThNGufSExzmucBZGm8clC";
-const encodedAuth = btoa(`${clientId}:${clientSecret}`);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [top, setTop] = useState(7); // Default value of 7 days
+  const [articles, setArticles] = useState([]);
+  const [modalIsOpen,setModalIsOpen] = useState(false);
 
+  const handleSearch = async (event) => {
+    event.preventDefault();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const url = `https://www.udemy.com/api-2.0/courses/?search=${query}`;
-    const response = await fetch(url, {
-      headers: {
-        Authorization: `Basic ${encodedAuth}`,
-
-        "Content-Type": "application/json",
-        Accept: "application/json, text/plain, */*",
-      },
-    });
+    const response = await fetch(
+      `https://dev.to/api/articles?tag=${searchTerm}&top=${top}`
+    );
     const data = await response.json();
-    setResults(data.results);
+
+    setArticles(data.slice(0, 9)); 
+    setModalIsOpen(true);
   };
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSearch} className="search-form">
         <input
           type="text"
-          placeholder="Search for courses"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Dev Community Search"
+          value={searchTerm}
+          onChange={(event) => setSearchTerm(event.target.value)}
+          className="search-input"
         />
-        <button type="submit">Search</button>
+        <div className="search-days">
+          <label htmlFor="top" className="search-days-label"> </label>
+          <select
+            id="top"
+            name="top"
+            value={top}
+            onChange={(event) => setTop(event.target.value)}
+            className="search-days-select"
+          >
+            <option value="30">30 days</option>
+            <option value="60">60 days</option>
+            <option value="90">90 days</option>
+            <option value="180">180 days</option>
+          </select>
+        </div>
+        <button type="submit" className="search-button">Search</button>
       </form>
-      <ul>
-        {results.map((result) => (
-          <li key={result.id}>{result.title}</li>
-        ))}
-      </ul>
+
+      <Modal isOpen={modalIsOpen}>
+        <div className="modal-content">
+          <div className="card-container">
+            {articles.map((article) => (
+              <div className="card" key={article.id}>
+                <a href={article.url}>
+                  <h2>{article.title}</h2>
+                </a>
+                <p>{article.description}</p>
+                <p>By {article.user.name}</p>
+              </div>
+            ))}
+          </div>
+          <button onClick={() => setModalIsOpen(false)}>Close</button>
+        </div>
+      </Modal>
+
+      <style jsx>{`
+        .card-container {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .card {
+          margin: 10px;
+          padding: 10px;
+          width: 300px;
+          background-color: #f0f0f0;
+        }
+        .card a {
+          text-decoration: none;
+        }
+        .card h2 {
+          margin: 0;
+          font-size: 24px;
+        }
+        .card p {
+          margin: 0;
+          font-size: 16px;
+        }
+
+        .modal-content {
+          padding: 20px;
+        }
+      `}</style>
     </div>
   );
 }
