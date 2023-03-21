@@ -37,21 +37,6 @@
 .header.scrolled .nav_toggle {
   color: #000; /* Change to black */
 }
-
-.header.scrolled {
-  background-color: #fff;
-  transition: 200ms linear;
-}
-
-.header.scrolled .nav_link,
-.header.scrolled .nav_logo,
-.header.scrolled .nav_toggle {
-  color: #000; /* Change to black */
-}
-.header.scrolled .nav_logo,
-.header.scrolled .nav_toggle {
-  color: #000; /* Change to black */
-}
 .nav_logo,
 .nav_toggle {
   color: #fff;
