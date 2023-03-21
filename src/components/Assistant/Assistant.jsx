@@ -30,7 +30,7 @@ MyComponent.propTypes = {
 };
 
 const ModalContent = ({ selectedCard, handleClose, handleOpen }) => {
-  const { title } = cardInfo[selectedCard] || { title: 'AI Assistant', content: 'Please select a valid card.' };
+  const { title } = cardInfo[selectedCard] || { title: 'AI Study Buddy', content: 'Please select a valid card.' };
   const urlMap = {
     'Assistant': 'https://chat.openai.com/chat',
   };
@@ -43,7 +43,7 @@ const ModalContent = ({ selectedCard, handleClose, handleOpen }) => {
       <Typography variant="h6" component="h2">
         {title}
       </Typography>
-      <i className="uil uil-robot" style={{cursor:'pointer'}} onClick={() => handleOpen(selectedCard)}></i>
+    
       </Box>
       {url && (
         <Box sx={{ height: '80vh', overflow: 'hidden' }}>
