@@ -14,7 +14,6 @@ import Signup from "./components/signup/Signup";
 import Skills from "./components/skills/Skills";
 import ResourcesDisplay from "./components/resources/ResourcesDisplay";
 import Contact from './components/contact/Contact';
-import MainPage from './components/main/MainPage';
 
 function App() {
   const { user, authIsReady } = useAuthContext();
@@ -34,7 +33,6 @@ function App() {
               {user && <Skills />}
               {user && <ResourcesDisplay />}
               {user && <Contact />}
-              {user && <MainPage />}
 
               {!user && <Redirect to="/login" />}
             </Route>
