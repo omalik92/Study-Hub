@@ -31,6 +31,8 @@ const Header = () => {
     setDrawer(false);
   };
 
+  const [scrolled, setScrolled] = useState(false);
+
   // Select the header element
   const header = document.querySelector(".header");
   useEffect(() => {
