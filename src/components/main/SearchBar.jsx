@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import Modal from 'react-modal';
 import './searchbar.css';
 
-
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [top, setTop] = useState(7); // Default value of 7 days
   const [articles, setArticles] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -13,12 +11,18 @@ function SearchBar() {
     event.preventDefault();
 
     const response = await fetch(
-      `https://dev.to/api/articles?tag=${searchTerm}&top=${top}`
+      `https://dev.to/api/articles?tag=${searchTerm}`
     );
     const data = await response.json();
 
     setArticles(data.slice(0, 9));
     setModalIsOpen(true);
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSearch(event);
+    }
   };
 
   return (
@@ -29,24 +33,9 @@ function SearchBar() {
           placeholder="Dev Community Search"
           value={searchTerm}
           onChange={(event) => setSearchTerm(event.target.value)}
+          onKeyPress={handleKeyPress}
           className="search-input"
         />
-        <div className="search-days">
-          <label htmlFor="top" className="search-days-label"> </label>
-          <select
-            id="top"
-            name="top"
-            value={top}
-            onChange={(event) => setTop(event.target.value)}
-            className="search-days-select"
-          >
-            <option value="30">30 days</option>
-            <option value="60">60 days</option>
-            <option value="90">90 days</option>
-            <option value="180">180 days</option>
-          </select>
-        </div>
-        <button type="submit" className="search-button">Search</button>
       </form>
 
       <Modal isOpen={modalIsOpen}>
@@ -66,7 +55,7 @@ function SearchBar() {
         </div>
       </Modal>
 
-      <style jsx>{`
+      <style >{`
         .card-container {
           display: flex;
           flex-wrap: wrap;

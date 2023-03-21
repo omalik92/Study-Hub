@@ -18,6 +18,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { Box } from "@mui/system";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 //firebase imports
 import { useLogout } from "../../hooks/useLogout";
@@ -88,9 +89,12 @@ const Header = () => {
             </li>
 
             <li className="nav_item">
-              <a href="#resources" className="nav_link">
+              {/* <a href="#resources" className="nav_link">
                 <i className="uil uil-puzzle-piece nav_icon"></i> Resources
-              </a>
+              </a> */}
+              <Link to="/resources" className="nav_link">
+                <i className="uil uil-puzzle-piece nav_icon"></i> Resources
+              </Link>
             </li>
 
             <li className="nav_item">

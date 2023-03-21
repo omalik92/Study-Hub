@@ -1,0 +1,34 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    font-size: 0.8rem;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-right: 1rem;
+  }
+  
+  ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  ul li a:hover {
+    color: #666;
+  }
+  
