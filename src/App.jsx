@@ -1,10 +1,8 @@
-import { useState } from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { useAuthContext } from "./hooks/useAuthContext";
 
 import "./App.css";
 import Header from "./components/header/Header";
-// import MatHeader from "./components/header/MatHeader";
 import Home from "./components/home/Home";
 import Courses from "./components/courses/Courses";
 import Player from './components/courses/Player';
@@ -21,11 +19,12 @@ function App() {
     <div className="App">
       {authIsReady && (
         <BrowserRouter>
-          <Header />
+          
           
 
           <Switch>
             <Route exact path="/">
+             {user && <Header />}
               {user && <Home />}
               {user && <Courses />}
               {user && <Player />}

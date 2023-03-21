@@ -3,8 +3,8 @@ import "./player.css";
 import Box from "@mui/joy/Box";
 import Card from "@mui/joy/Card";
 import CardContent from "@mui/joy/CardContent";
-import Typography from "@mui/joy/Typography";
-import Button from "@mui/material/Button";
+// import Typography from "@mui/joy/Typography";
+// import Button from "@mui/material/Button";
 import ReactPlayer from "react-player";
 import Vid from "../home/Vid";
 
