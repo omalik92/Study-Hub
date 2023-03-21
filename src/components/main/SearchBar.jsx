@@ -66,7 +66,7 @@ function SearchBar() {
         </div>
       </Modal>
 
-      <style jsx>{`
+      <style >{`
         .card-container {
           display: flex;
           flex-wrap: wrap;
