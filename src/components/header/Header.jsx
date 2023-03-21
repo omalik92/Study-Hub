@@ -1,8 +1,23 @@
 import React, { useEffect, useState } from "react";
+import { useAuthContext } from "../../hooks/useAuthContext";
+
 import "../header/header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 //required for app drawer
 import Drawer from "@mui/material/Drawer";
+import Backdrop from "@mui/material/Backdrop";
+
+//required for profile section
+import Avatar from "@mui/material/Avatar";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import SettingsIcon from "@mui/icons-material/Settings";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import { Box } from "@mui/system";
+import Button from "@mui/material/Button";
 
 //firebase imports
 import { useLogout } from "../../hooks/useLogout";
@@ -13,6 +28,12 @@ const Header = () => {
   const [Toggle, showMenu] = useState(false);
 
   const [drawer, setDrawer] = useState(false);
+
+  const { user, authIsReady } = useAuthContext();
+
+  useEffect(() => {
+    console.log("User data:", user);
+  }, [user]);
 
   const handleDrawerOpen = () => {
     setDrawer(true);
@@ -88,13 +109,74 @@ const Header = () => {
             <Drawer anchor="right" open={drawer} onClose={handleDrawerClose}>
               <div
                 className="drawer-content"
-                style={{ width: "300px", padding: "16px" }}
+                style={{ width: "325px", padding: "16px" }}
               >
-                <a onClick={logout} href="#" className="nav_link_logout">
+                <h3>Profile</h3>
+
+                {/* User avatar and name */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <Avatar sx={{ width: 56, height: 56, marginRight: 2 }}>
+                    U
+                  </Avatar>
+                  <div>
+                    <h4 style={{ margin: 0 }}>omalik92</h4>
+                    <p style={{ margin: 0 }}>
+                      {user?.email || "user@example.com"}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Settings toolbar */}
+                <ListItem button>
+                  <ListItemIcon>
+                    <SettingsIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Settings" />
+                </ListItem>
+
+                {/* Saved courses */}
+                <ListItem button onClick={() => showMenu(!Toggle)}>
+                  <ListItemText primary="Saved courses" />
+                  {Toggle ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                </ListItem>
+                <div className={Toggle ? "nav_menu show-menu" : "nav_menu"}>
+                  {/* List of saved courses */}
+                  <List component="nav" disablePadding>
+                    <ListItem button>
+                      <ListItemText primary="Course 1" />
+                    </ListItem>
+                    <ListItem button>
+                      <ListItemText primary="Course 2" />
+                    </ListItem>
+                  </List>
+                </div>
+
+                {/* Logout */}
+                <Button
+                  onClick={logout}
+                  variant="contained"
+                  color="primary"
+                  fullWidth
+                >
                   Logout
-                </a>
+                </Button>
               </div>
             </Drawer>
+
+            <Backdrop
+              open={drawer}
+              onClick={handleDrawerClose}
+              sx={{
+                zIndex: (theme) => theme.zIndex.drawer - 1,
+                backdropFilter: drawer ? "blur(5px)" : "none",
+              }}
+            />
           </ul>
 
           {/* navigation links END */}
