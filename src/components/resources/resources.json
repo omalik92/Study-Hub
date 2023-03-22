@@ -8,10 +8,10 @@
     },
     {
         "id": 2,
-        "title": "KhanAcademy",
-        "image": "images/khan.png",
-        "description" : "Khan Academy is a free online learning platform. ",
-        "projectUrl": "https://www.khanacademy.org/computing"
+        "title": "edX",
+        "image": "images/edx.png",
+        "description" : " edX is a platform that offers both free and paid computer programming courses. ",
+        "projectUrl": "https://www.edx.org/learn/computer-programming#browse-courses"
       },
       {
         "id": 3,
