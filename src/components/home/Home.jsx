@@ -2,7 +2,6 @@ import React from 'react'
 import './home.css';
 import Social from './Social';
 import Data from './Data';
-import GPT from '../Assistant/Assistant';
 import mp4 from '../../assets/constalation.mp4';
 
 

@@ -1,17 +1,21 @@
 .parent-container {
-  width: 50%;
+    width: 50%;
+  
+  }
 
-}
 
-.card {
-  width: 350px;
-  height: 300px;
-  margin: 5px;
-}
 
-.my-container {
-  padding: 50px;
-}
+  .card {
+    width: 350px; /* set the width */
+    height: 300px; /* set the height */
+    margin: 5px; /* Adjust this to reduce the margin between the cards */
+  }
+  
+  
+  .my-container {
+    padding: 50px;
+  }
+
 
 .projects {
   color: #91987b;
@@ -24,6 +28,17 @@
 }
 
 
+/* p,
+.description {
+  color: #6e735d;
+  text-decoration: none !important;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  max-height: 20px;
+} */
+
+
 .projectTitle {
   height: 10%;
   color: #6e735d;
@@ -31,32 +46,25 @@
   font-size: 20px;
 }
 
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+#header {
+  background: url(/images/courses.jpeg) center center / cover no-repeat ;
+}
+
 #gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-@media only screen and (max-width: 768px) {
-  .parent-container {
-    width: 100%;
-  }
-
-  .card {
-    width: 100%;
-    margin: 5px 0;
-  }
-
-  .my-container {
-    padding: 10px;
-  }
-
-  .projects {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  .projectTitle {
-    font-size: 18px;
-  }
 }

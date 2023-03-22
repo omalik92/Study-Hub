@@ -6,6 +6,8 @@ import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Courses from "./components/courses/Courses";
 import Player from "./components/courses/Player";
+import VideoCard from './components/courses/VideoCard';
+import GridCard from './components/timeline/GridCard';
 import TimelineColor from "./components/timeline/Timeline";
 import Login from "./components/login/Login";
 import Signup from "./components/signup/Signup";
@@ -25,7 +27,11 @@ function App() {
               {user && <Header />}
               {user && <Home />}
               {user && <Courses />}
+              {/* {user && <VideoCard />} */}
               {user && <Player />}
+             
+
+              {user && <GridCard />}
               {/* {user && <TimelineColor />} */}
               {user && <Skills />}
               {user && <Footer />}
