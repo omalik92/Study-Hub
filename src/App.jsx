@@ -26,7 +26,7 @@ function App() {
               {user && <Home />}
               {user && <Courses />}
               {user && <Player />}
-              {user && <TimelineColor />}
+              {/* {user && <TimelineColor />} */}
               {user && <Skills />}
               {user && <Footer />}
               {!user && <Redirect to="/login" />}
