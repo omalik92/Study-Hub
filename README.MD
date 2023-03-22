@@ -39,19 +39,8 @@ To get started with the Study-Hub (online learning platform), simply follow thes
 at Developer Roadmap" section.
 - Screeshot of the Web Page:
 
-![screenshot of page](public/images/Screenshot1.png)
-![screenshot of page](public/images/Screenshot2.png)
-![screenshot of page](public/images/Screenshot3.png)
-![screenshot of page](public/images/Screenshot4.png)
-
-
-## Future Directions
-
-- AI Assistant integration: Real-time integrated AI learning assistant for answering questions; Research queries; Recommended course suggestions
-- User Profile Functionality & Form connects: Expand function to allow users to save courses and track progress; User settings options; Development newletter; Contact form connection within Firebase
-- Career Progression Solutions: Recommended jobs based on the skills level and skills aquired; Job board and current vacancies; Employer/company reviews
-- Dynamically pull data from various API's ; Interactive course content; Sort/filter functionality for BEGINNER/ INTERMEDIATE/ ADAVNCED 
-
+![screenshot of page](assets/images/Screenshot.png)
+![screenshot of page](assets/images/Screenshot.png)
 
 
 ## Contributors

@@ -27,7 +27,6 @@ function SearchBar() {
 
   return (
     <div>
-<<<<<<< HEAD
       <form onSubmit={handleSearch} className="search-form">
         <input
           type="text"
@@ -39,20 +38,6 @@ function SearchBar() {
         />
         {/* <button type="submit" className="button button--flex" style={{padding:15}}>Search</button> */}
       </form>
-=======
- <form onSubmit={handleSearch} className="search-form">
-  <input
-    type="text"
-    placeholder="Dev Community Search"
-    value={searchTerm}
-    onChange={(event) => setSearchTerm(event.target.value)}
-    onKeyPress={handleKeyPress}
-    className="search-input"
-  />
-  <button type="submit" className="search-button">Search</button>
-</form>
-
->>>>>>> fa50f7335459047d93de06eaf42b6638f715fab8
 
       <Modal isOpen={modalIsOpen}>
         <div className="modal-content">
