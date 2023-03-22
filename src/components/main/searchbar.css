@@ -63,10 +63,6 @@
   transition: background-color 0.3s;
 }
 
-.search-button:hover {
-  background-color: #3e8e41;
-}
-
 .search-days-select {
   padding: 10px;
   border: 1px solid #ccc;
@@ -78,4 +74,25 @@
 
 .search-days-select option {
   font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  .search-form {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-button {
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-right: 0;
+  }
 }
