@@ -36,6 +36,7 @@ function SearchBar() {
           onKeyPress={handleKeyPress}
           className="search-input"
         />
+        {/* <button type="submit" className="button button--flex" style={{padding:15}}>Search</button> */}
       </form>
 
       <Modal isOpen={modalIsOpen}>

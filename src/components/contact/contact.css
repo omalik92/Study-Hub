@@ -8,7 +8,6 @@
     background-color:var(--body-color);
     /* border-top: 0.5px #000 solid; */
     box-shadow: 0 0 3px  rgba(0, 0, 0, 0.6) inset;
-
 }
 .contact_title {
     text-align: center;
@@ -31,7 +30,7 @@
 .contact_card-icon {
     font-size: 2rem;
     color: var(--title-color);
-    margin-bottom: var(--mb-0-25);
+    /* margin-bottom: var(--mb-0-25); */
 }
 .contact_card-title,
 .contact_card-data {
