@@ -1,12 +1,14 @@
 .parent-container {
     width: 50%;
   
-
   }
 
+
+
   .card {
-    width: 350px; /* Adjust this to increase or decrease the size of the card */
-    margin: 10px; /* Adjust this to reduce the margin between the cards */
+    width: 350px; /* set the width */
+    height: 300px; /* set the height */
+    margin: 5px; /* Adjust this to reduce the margin between the cards */
   }
   
   
