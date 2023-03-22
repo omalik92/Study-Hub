@@ -74,18 +74,18 @@ const Header = () => {
     <header className={`header ${scrolled ? "scrolled" : ""}`}>
       <nav className="nav container">
         {/* Header LOGO */}
-        <a href="#home" className="nav_logo">
+        <Link to="/" className="nav_logo">
           StudyHUB
-        </a>
+        </Link>
 
         <div className={Toggle ? "nav_menu show-menu" : "nav_menu"}>
           {/* navigation links START */}
 
           <ul className="nav_list grid">
             <li className="nav_item">
-              <a href="#home" className="nav_link">
+              <Link to="/" className="nav_link">
                 <i className="uil uil-estate nav_icon"></i> Home
-              </a>
+              </Link>
             </li>
 
             <li className="nav_item">
@@ -98,9 +98,9 @@ const Header = () => {
             </li>
 
             <li className="nav_item">
-              <a href="#contact" className="nav_link">
+              <Link to="/contact" className="nav_link">
                 <i className="uil uil-megaphone nav_icon"></i> Contact
-              </a>
+              </Link>
             </li>
             {/* Profile link and drawer */}
             <li className="nav_item">

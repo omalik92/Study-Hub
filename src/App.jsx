@@ -5,13 +5,13 @@ import "./App.css";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Courses from "./components/courses/Courses";
-import Player from './components/courses/Player';
+import Player from "./components/courses/Player";
 import TimelineColor from "./components/timeline/Timeline";
 import Login from "./components/login/Login";
 import Signup from "./components/signup/Signup";
 import Skills from "./components/skills/Skills";
 import ResourcesDisplay from "./components/resources/ResourcesDisplay";
-import Contact from './components/contact/Contact';
+import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 
 function App() {
@@ -20,27 +20,32 @@ function App() {
     <div className="App">
       {authIsReady && (
         <BrowserRouter>
-          
-          
-
           <Switch>
             <Route exact path="/">
-             {user && <Header />}
+              {user && <Header />}
               {user && <Home />}
               {user && <Courses />}
               {user && <Player />}
               {user && <TimelineColor />}
               {user && <Skills />}
-              {user && <ResourcesDisplay />}
-              {user && <Contact />}
               {user && <Footer />}
-
-
               {!user && <Redirect to="/login" />}
             </Route>
 
+            <Route exact path="/resources">
+              {user && <Header />}
+              {user && <ResourcesDisplay />}
+              {user && <Footer />}
+              {!user && <Redirect to="/login" />}
+            </Route>
 
-            <Route path="/courses"></Route>
+            <Route exact path="/contact">
+              {user && <Header />}
+              {user && <Contact />}
+              {user && <Footer />}
+              {!user && <Redirect to="/login" />}
+            </Route>
+
             <Route path="/login">
               {!user && <Login />} {user && <Redirect to="/" />}
             </Route>
@@ -55,4 +60,3 @@ function App() {
 }
 
 export default App;
-
