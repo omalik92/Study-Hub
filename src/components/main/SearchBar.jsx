@@ -11,8 +11,8 @@ function SearchBar() {
     event.preventDefault();
 
     const response = await fetch(
-      `https://dev.to/api/articles?tag=${searchTerm}`
-    );
+      `https://dev.to/api/articles?tag=${searchTerm}&top=180`
+      );
     const data = await response.json();
 
     setArticles(data.slice(0, 9));
