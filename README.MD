@@ -10,7 +10,7 @@ Deployed at: https://studyhub23.netlify.app/
 
 We created an application to help web developer students and self-learners to keep up-to-date with the latest technologies and learn new skills on their own time by utilizing happenings in the community. With Study-Hub, which is educational platform users can explore new subjects, master challenging concepts, and work together to achieve their academic goals. They also can explore their leraning journey with our step by step guide to becoming a Developer.
 
-The app utilizes React, Bootstrap, node.js, Firebase, javaScript, Jquery, CSS, and HTML to deliver a user-friendly and visually appealing experience. To be able to see latest top articles in web development, dev.to API us used.
+The app utilizes React, Vite, Bootstrap, node.js, Firebase, javaScript, Jquery, CSS, and HTML to deliver a user-friendly and visually appealing experience. To be able to see latest top articles in web development, dev.to API us used.
 
 
 ## Table of Contents (Optional)
@@ -39,8 +39,9 @@ To get started with the Study-Hub (online learning platform), simply follow thes
 at Developer Roadmap" section.
 - Screeshot of the Web Page:
 
-![screenshot of page](assets/images/Screenshot.png)
-![screenshot of page](assets/images/Screenshot.png)
+![screenshot of page](public/images/Screenshot1.png)
+![screenshot of page](public/images/Screenshot2.png)
+![screenshot of page](public/images/Screenshot3.png)
 
 
 ## Contributors
@@ -49,6 +50,12 @@ Omar Malik - https://github.com/omalik92
 Sevda Seyidova - https://github.com/Helloseva  
 Omar Ahmad - https://github.com/omar-ahm
 
+## Future Directions 
+
+- AI Assistant integration
+- User Profile Functionality & Form connects
+- Career Progression Solutions
+- Course dashboard to integrate with further API's
 
 ## License
 
