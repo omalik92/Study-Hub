@@ -4,13 +4,13 @@
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: transparent;
+  background-color: black;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: transparent;
+  background-color: black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .d-flex {
@@ -25,7 +25,7 @@
 }
 
 .header.scrolled {
-  background-color: #fff;
+  background-color: white;
   transition: 200ms linear;
 }
 
