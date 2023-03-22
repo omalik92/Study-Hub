@@ -29,12 +29,9 @@ function App() {
               {user && <Courses />}
               {/* {user && <VideoCard />} */}
               {user && <Player />}
-<<<<<<< HEAD
              
 
               {user && <GridCard />}
-=======
->>>>>>> fa50f7335459047d93de06eaf42b6638f715fab8
               {/* {user && <TimelineColor />} */}
               {user && <Skills />}
               {user && <Footer />}
