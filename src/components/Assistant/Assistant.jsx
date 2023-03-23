@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import "./assistant.css";
 import "../home/home.css"
 import cardInfo from './cardInfo.json';
+import urlLink from '../../assets/AiAssist.mp4';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : 'var(--body-color)',
@@ -32,7 +33,7 @@ MyComponent.propTypes = {
 const ModalContent = ({ selectedCard, handleClose, handleOpen }) => {
   const { title } = cardInfo[selectedCard] || { title: 'AI Study Buddy', content: 'Please select a valid card.' };
   const urlMap = {
-    'Assistant': 'src/components/Assistant/AiAssist.mp4',
+    'Assistant': urlLink,
   };
   const url = urlMap[selectedCard];
  
