@@ -32,7 +32,7 @@ MyComponent.propTypes = {
 const ModalContent = ({ selectedCard, handleClose, handleOpen }) => {
   const { title } = cardInfo[selectedCard] || { title: 'AI Study Buddy', content: 'Please select a valid card.' };
   const urlMap = {
-    'Assistant': 'https://chat.openai.com/chat',
+    'Assistant': 'src/components/Assistant/AiAssist.mp4',
   };
   const url = urlMap[selectedCard];
  
@@ -43,7 +43,9 @@ const ModalContent = ({ selectedCard, handleClose, handleOpen }) => {
       <Typography variant="h6" component="h2">
         {title}
       </Typography>
-    
+      <button onClick={handleClose} style={{ backgroundColor: 'transparent', border: 'none', fontSize: '24px', cursor: 'pointer' }}>
+      <i className="uil uil-times-square"></i>
+        </button>
       </Box>
       {url && (
         <Box sx={{ height: '80vh', overflow: 'hidden' }}>
