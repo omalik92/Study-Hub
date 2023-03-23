@@ -33,7 +33,7 @@ MyComponent.propTypes = {
 const ModalContent = ({ selectedCard, handleClose, handleOpen }) => {
   const { title } = cardInfo[selectedCard] || { title: 'AI Study Buddy', content: 'Please select a valid card.' };
   const urlMap = {
-    'Assistant': urlLink,
+    'Assistant': 'https://studyhub23.netlify.app/',
   };
   const url = urlMap[selectedCard];
  
